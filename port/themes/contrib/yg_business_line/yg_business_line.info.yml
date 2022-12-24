@@ -1,0 +1,32 @@
+name: 'YG Business Line'
+description: 'Theme for Business'
+core_version_requirement: ^8 || ^9
+type: theme
+base theme: classy
+screenshot: screenshot.png
+
+
+regions:
+  navigation: 'Navigation'
+  primary_menu: 'primary_menu'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  title: 'Title'
+  slider: 'Slider'
+  about: 'About'
+  banner: 'Banner'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer Menu'
+  footer_blog: 'Footer blog '
+  copyright: 'Copyright'
+  
+
+libraries:
+  - yg_business_line/global-styling
+  - yg_business_line/bootstrap
+# Information added by Drupal.org packaging script on 2020-08-24
+version: '2.0.0'
+project: 'yg_business_line'
+datestamp: 1598257109

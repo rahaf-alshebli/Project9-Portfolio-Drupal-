@@ -1,0 +1,18 @@
+<!-- Testimonial items  -->
+	<div class="col-md-6 mx-auto text-center testimonial-content wow fadeInDown">
+	  <div class="single-testimonial-carousel">
+	    <div class="testimonial-information">
+	      <div class="testimonial-image">
+	       <img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}"  class="img-responsive" alt="{{ content.field_image['#items'].alt }}" title="{{ content.field_image['#items'].title }}">
+	      </div>                 
+	      <div class="testimonial-name">
+	        <h4>{{ content.field_title.0 }}</h4>
+	      </div>
+	    </div>
+	    <div class="testimonial-carousel-text">
+	      {{ content.field_body.0 }}
+	    </div>      
+	  </div>
+	</div>
+<!-- End Testimonial items  -->
+

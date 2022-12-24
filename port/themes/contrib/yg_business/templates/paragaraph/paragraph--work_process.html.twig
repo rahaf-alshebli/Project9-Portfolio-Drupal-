@@ -1,0 +1,31 @@
+<!-- Work process -->
+  <section id="work-process">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto process-work">
+            <div class="row work-done" style="background-image: url('{{ file_url(content.field_image['#items'].entity.uri.value) }}');background-size: cover;">
+              <div class="col-md-7 wow fadeInLeft">
+                <h2>{{ content.field_title.0 }}</h2>
+              </div>
+              {% if content.field_url.0|render is not empty %}
+                <div class="col-md-5 wow fadeInRight">
+                  <a href="{{ content.field_url[0]['#url']|render }}" class="btn btn-infos">
+                  {{ content.field_url[0]['#title'] }}</a>
+                </div>
+              {% endif %}  
+            </div>
+          <div class="process-header text-center">
+            <h2>{{ content.field_address.0 }}</h2> 
+          </div> 
+         <canvas id="myCanvas" width="400" height="200"></canvas>
+         <canvas id="secondCanvas" width="400" height="200"></canvas>
+         <canvas id="thirdCanvas" width="400" height="200"></canvas>
+            <div class="row process-wr text-center">
+              {{ content.field_work_process_item }}
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- End Work process -->

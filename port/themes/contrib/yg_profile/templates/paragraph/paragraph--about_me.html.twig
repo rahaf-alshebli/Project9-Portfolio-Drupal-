@@ -1,0 +1,48 @@
+ <div class="section light-bg" id="about-me">
+        <div class="container">
+            <div class="section-title">
+                <small class="wow slideInUp">{{ content.field_about_sub_title.0 }}</small>
+                <h3 class="wow slideInUp">{{ content.field_about_title.0 }}</h3>
+            </div>
+            <div class="row">                 
+                <div class="col-12 col-lg-6">
+                    <img src="{{ file_url(content.field_about_image['#items'].entity.uri.value) }}" alt="" class="img-fluid">
+                </div>                    
+                <div class="col-12 col-lg-6">                  
+                    <div class="about-me">                    
+                        <h4 class="wow slideInUp">{{ content.field_about_name.0 }}</h4>
+                        <p class="wow slideInUp">{{ content.field_about_desc.0 }} </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="card features text-center wow slideInUp">
+                                <div class="card-body">
+                                    <div class="feature">
+                                        <div class="feature-body">
+                                            <div class="icon"><img src="{{ file_url(content.field_email_image['#items'].entity.uri.value) }}" /></div>
+                                            <p class="card-text">{{ content.field_email.0 }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="card features text-center wow slideInUp">
+                                <div class="card-body">
+                                    <div class="feature">
+                                        <div class="feature-body">
+                                            <div class="icon"><img src="{{ file_url(content.field_phone_image['#items'].entity.uri.value) }}" /></div>
+                                            <p class="card-text">{{ content.field_phone_number.0 }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-me">                        
+                        <a href="{{ content.field_about_btn[0]['#url']|render }}" class="btn btn-light wow slideInUp">{{ content.field_about_btn[0]['#title']|render }}</a>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>    

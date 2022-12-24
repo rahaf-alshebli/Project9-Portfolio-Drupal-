@@ -1,0 +1,12 @@
+ <div class="section dark-bg" id="hire-me" style="background:url('{{ file_url(content.field_banner_bg_image['#items'].entity.uri.value) }}');">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-lg-12">
+                    <h3>{{ content.field_phone_number.0 }}</h3>
+                </div>
+                <div class="col-12 col-lg-12">
+                    <a class="btn btn-primary" href="{{ content.field_about_btn[0]['#url']|render }}">{{ content.field_about_btn[0]['#title']|render }}</a>
+                </div>                
+            </div>
+        </div>           
+    </div>  

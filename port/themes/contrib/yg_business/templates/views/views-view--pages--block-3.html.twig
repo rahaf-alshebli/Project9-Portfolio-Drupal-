@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<!-- our services -->
+  <section id="our-clients" class="works-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 section-title section-title-wrapper text-center mx-auto wow fadeInUp">
+          <h1 class="heading">{{ view.getTitle() }}</h1>
+          <p>{{ header }}</p>
+        </div>
+      </div>  
+        <div class="row col-md-10 mx-auto filter-title wow fadeInDown">
+          <div class="portfolioFilter clearfix">
+            <ul>
+              <li><a href="#" data-filter="*" class="current">Commercial</a></li>
+              {% set arr = [] %}
+              {% for result in view.result %}
+              {% set a = view.field.name.value(view.result[loop.index-1]) %}
+              {% if a is defined %}
+              {% set arr = arr|merge({(a): (a)}) %}
+              {% endif %}
+              {% endfor %}
+              {% for key, result in arr %}
+                <li><a href="#" data-filter=".{{ key|lower|replace({' ':'-'}) }}">{{ key }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>  
+        <div class="row clients-listing portfolioContainer">
+          {% for result in view.result %}
+            {% set a = view.field.name.value(view.result[loop.index-1]) %}
+            {% if a is defined %}
+            {% set class = a|lower|replace({' ':'-'}) %}
+            {% else %}
+            {% set class = '' %}
+            {% endif %}
+            {% set style = view.field.field_style.value(view.result[loop.index-1]) %}
+            {% if style == 0 %}
+              <div class="col-md-5 clients-lists {{ class }} wow fadeInLeft">
+                 <div class="hovereffect info">
+                  <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                    <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                    <div class="overlay">
+                     <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                    </div>
+                  </a>  
+                  </div>
+             </div>
+            {% elseif style == 1 %}
+              <div class="col-md-7 clients-lists {{ class }} wow fadeInLeft">
+                 <div class="hovereffect info">
+                  <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                    <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                    <div class="overlay">
+                     <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                    </div>
+                  </a>  
+                  </div>
+             </div>
+            {% else %} 
+             <div class="col-md-4 clients-lists {{ class }} wow fadeInLeft">
+                 <div class="hovereffect info">
+                  <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                    <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                    <div class="overlay">
+                     <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                    </div>
+                  </a>  
+                </div>
+            </div>
+          {% endif %} 
+        {% endfor %}  
+      </div>
+    </div>
+  </section>  
+<!-- End our services  -->

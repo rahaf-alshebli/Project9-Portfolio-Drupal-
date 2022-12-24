@@ -1,0 +1,16 @@
+<div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="recent-blog-item wow fadeInLeft">
+    <img src="{{ fields.field_image.content}}" class="img-responsive" style="height:200px;" alt="Team image">
+    <div class="recent-blog-details">
+      <h3><a href="#">{{ fields.title.content}}</a></h3>
+      <p>{{ fields.body.content}}</p>
+      <ul class="list-inline">
+        <li><i class="fa fa-clock-o"></i>{{ fields.created.content}}</li>
+        <li><i class="fa fa-user"></i>{{ fields.uid.content}}</li>            
+      </ul>          
+    </div>
+    <div class="recent-blog-btn">
+      <a href="{{ fields.view_node.content}}" class="text-right">Read More</a>
+    </div>
+  </div>
+</div>

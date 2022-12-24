@@ -1,0 +1,19 @@
+<!-- about details section  -->
+{% set image = file_url(content.field_image['#items'].entity.uri.value) %}
+    <section id="our-details">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-md-6 about-details-image wow fadeInRight">
+          {% if image |render is not empty %}
+            <img src="{{ image }}"  class="img-fluid" alt="{{ content.field_image['#items'].alt }}" title="{{ content.field_image['#items'].title }}">
+            <span>#</span>
+          {% endif %}  
+          </div>
+          <div class="col-md-6 about-details-content wow fadeInLeft">
+            <h6>{{ content.field_title.0 }}</h6>
+            <p>{{ content.field_body.0 }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- End about details section  -->

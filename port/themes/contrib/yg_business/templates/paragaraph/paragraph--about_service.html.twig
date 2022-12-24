@@ -1,0 +1,20 @@
+	
+	{% if '0' in content.field_style.0|render|striptags %}
+	<div class="col-md-7 about-service-image">
+		<img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-fluid"
+       alt="{{ content.field_image['#items'].alt }}" title="{{ content.field_image['#items'].title }}">
+	</div>
+	<div class="col-md-5 about-service-content wow fadeInRight">
+		<h2>{{ content.field_title.0 }}</h2>
+		{{ content.field_body.0 }}
+	</div>
+	{% else %}  
+	<div class="col-md-5 about-service-content wow fadeInRight" >
+	<h2>{{ content.field_title.0 }}</h2>
+	{{ content.field_body.0 }}
+	</div>
+	<div class="col-md-7 about-service-image wow fadeInLeft">
+	<img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-fluid"
+       alt="{{ content.field_image['#items'].alt }}" title="{{ content.field_image['#items'].title }}">
+	</div>
+	{% endif %}

@@ -1,0 +1,24 @@
+          
+<div id="slider-section">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% for result in view.result %}
+          <li data-target="#myCarousel" data-slide-to="{{ loop.index-1 }}" class="{% if ( loop.index == 1 )  %}active{% endif %}"></li>
+        {% endfor %}
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        {% for result in view.result %}
+          <div class="item {% if ( loop.index == 1 )  %}active{% endif %} slider-image">
+              <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="Slider image">
+              <div class="carousel-caption mx-auto wow fadeInUp">
+                <h3>{{ view.field.title.value(view.result[loop.index-1]) }}</h3>
+                <p>{{ view.field.body.value(view.result[loop.index-1]) |striptags }}</p>
+                <a href="#" class="text-right">Read More</a>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>

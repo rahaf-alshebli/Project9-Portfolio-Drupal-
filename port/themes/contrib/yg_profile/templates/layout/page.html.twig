@@ -1,0 +1,39 @@
+
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        {{ page.header}} <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                            {{ page.primary_menu }}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+{% set url = url('<current>') %}
+{% if 'user' in url|render|render %}    
+    <header id="home" style="background-image:url({{ bg_image_url }})";>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-md-10 text-center slider-content wow slideInUp">
+                    <h1 class="">{{ page['#title'] }}</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endif %}  
+
+    <section {{ content_attributes.addClass(content_classes) }}>
+            {# Content #}
+            {% block content %}
+              <a id="main-content"></a>
+              {{ page.content }}
+            {% endblock %}
+    </section>
+
+
+    <footer class="my-5 text-center">
+        <p><small>&copy; 2018. YG Profile. All Rights Reserved.</small></p>
+         <p class="our-info"> Theme By<a href="https://www.drupaldevelopersstudio.com/" target="_blank"> Drupal Developers Studio</a>, A Division of <a href="https://www.youngglobes.com/" target="_blank"> Young Globes</a></p> 
+    </footer>

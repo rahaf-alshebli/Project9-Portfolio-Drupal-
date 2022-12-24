@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+    
+<!-- our services -->
+ <section id="our-clients"  class="works-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 section-title section-title-wrapper text-center mx-auto wow fadeInUp">
+          <h2 class="heading">{{ view.getTitle() }}</h2>
+          <p>{{ header }}</p>
+        </div>
+        <div class="row clients-listing">
+          {% for result in view.result %}
+          {% set style = view.field.field_style.value(view.result[loop.index-1]) %}
+          {% if style == 0 %}
+            <div class="col-md-7 clients-lists website wow fadeInLeft">
+               <div class="hovereffect info">
+                <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                  <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                  <div class="overlay">
+                   <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                  </div>
+                </a>  
+                </div>
+           </div>
+          {% elseif style == 1 %}
+            <div class="col-md-5 clients-lists website wow fadeInLeft">
+               <div class="hovereffect info">
+                <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                  <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                  <div class="overlay">
+                   <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                  </div>
+                </a>  
+                </div>
+           </div>
+          {% else %} 
+           <div class="col-md-4 clients-lists website wow fadeInLeft">
+               <div class="hovereffect info">
+                <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="portfolio-popup">
+                  <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" alt="our clients image" class="img-fluid">
+                  <div class="overlay">
+                   <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                  </div>
+                </a>  
+                </div>
+           </div>
+          {% endif %} 
+        {% endfor %}   
+        </div>
+          {{ footer }}
+      </div> 
+    </div>
+  </section>  
+<!-- End our services -->  

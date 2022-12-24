@@ -1,0 +1,22 @@
+name: YG Profile
+type: theme
+base theme: classy
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+core_version_requirement: ^8 || ^9
+
+regions:
+  header: Logo
+  primary_menu: Primary menu
+  slider: Slider
+  content: Content
+  footer_col_first: Footer column first
+  footer_col_second: Footer column Second
+
+
+libraries:
+  - yg_profile/global-styling  
+
+# Information added by Drupal.org packaging script on 2020-07-24
+version: '2.0.0'
+project: 'yg_profile'
+datestamp: 1595588739

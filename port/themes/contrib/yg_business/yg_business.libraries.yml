@@ -1,0 +1,33 @@
+global-style: # Libraries needed in all pages.
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Lato:400,700,800|Open+Sans:400,600,700': { type: external }
+      'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css': { type: external }
+      css/magnific-popup.css: {}
+      css/carousel.css: {}
+      css/animate.css: {}
+      css/style.css: {}
+      css/custom.css: {}
+
+  js:
+    'http://code.jquery.com/jquery-migrate-3.0.0.js': { type: external, minified: true }
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js': { type: external }
+    'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js': { type: external }
+    js/scroll.js: {}
+    js/wow.min.js: {}
+    js/carousel.js: {}
+    js/magnific-popup.min.js: {}
+    js/gallery.js: {}
+    js/script.js: {}
+
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+
+fontawesome:
+  version: 1.x
+  css:
+    theme:
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': { type: external }
+

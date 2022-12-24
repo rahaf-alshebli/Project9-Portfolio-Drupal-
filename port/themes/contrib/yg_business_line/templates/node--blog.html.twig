@@ -1,0 +1,26 @@
+<section id="blog-detail">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-sm-10 col-md-offset-1 blog-body wow fadeInLeft">
+        <div class="blog-detail"> 
+          <div class="blog-detail-img"><img src="{{content.field_image.0}}" class="img-responsive" alt="causes"></div>
+          <div class="blog-detail-body">
+            <h3>{{ node.title.value }}</h3>
+            <p><span><i class="fa fa-clock-o"></i>{% if date %}  {{ date }} {% endif %}</span><span><i class="fa fa-user"></i>{{ node.Owner.name.value }}</span></p>
+            <p>{{ content.body }}</p>
+            <a href="/blogs" class="btn btn-custom">Back to Blog listing</a>
+          </div>
+       </div>  
+      </div>   
+    </div>
+  </div>
+</section>
+<section id="comments">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-sm-10 col-md-offset-1 comments wow fadeInLeft">
+        {{ content.field_comments }}
+      </div>
+    </div>
+  </div>
+</section>        

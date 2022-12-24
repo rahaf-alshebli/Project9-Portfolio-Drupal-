@@ -1,0 +1,18 @@
+<!-- We Plan -->
+{% set base_url = url('<front>') %}
+    <section id="our-plan">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="planning-image wow fadeInLeft">
+            <img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" 
+            alt="{{ content.field_image['#items'].alt }}" class="img-fluid" title="{{ content.field_image['#items'].title }}">
+          </div>
+          <div class="planning-content wow fadeInRight">
+            <img src="{{ base_url }}/themes/yg_business/images/Home/left-arrow (2).png" class="img-fluid">
+            <h2>{{ content.field_title.0 }}</h2>
+            {{ content.field_body.0 }}
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- End We Plan -->

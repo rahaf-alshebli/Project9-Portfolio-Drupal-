@@ -1,0 +1,9 @@
+{% for item in items %} 
+	{% if loop.first %} 
+	 <a href="tel:{{ item.content }}">{{ item.content }} |
+	{% else %}    
+       <a href="tel:{{ item.content }}"> {{ item.content }}</a>
+    </a>
+    {% endif %} 
+{% endfor %}
+

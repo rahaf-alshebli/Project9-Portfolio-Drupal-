@@ -1,0 +1,22 @@
+<!-- about top section  -->
+{% set base_url = url('<front>') %}
+    <section id="about-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 about-left-content wow fadeInRight">
+            <h1>{{ content.field_title.0 }}</h1>
+          </div>
+          <div class="col-md-6 about-right-content wow fadeInLeft">
+            {{ content.field_body.0 }}
+          </div>
+          <div class="col-md-12 about-page-image" style="background-image:url('{{ file_url(content.field_image['#items'].entity.uri.value) }}');background-size: cover;background-repeat: no-repeat;">
+              <div class="about-page-image-content wow fadeInDown">
+                  <h2>{{ content.field_sub_title.0 }}</h2>
+                  <p>{{ content.field_address.0 }}</p>
+                  <img src="{{  base_url }}/themes/yg_business/images/About/left-arrow.png" alt="left arrow" class="img-fluid">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- end about top section -->

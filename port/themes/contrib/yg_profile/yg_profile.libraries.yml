@@ -1,0 +1,29 @@
+global-styling:
+  css:
+    base:
+      
+      # 'https//fonts.googleapis.com': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Rubik:300,400,500': { type: external, minified: true }
+      styles/bootstrap.min.css: {}
+      styles/owl.carousel.min.css: {}
+      styles/magnific-popup.css: {}
+      styles/animate.css: {}
+      styles/main.css: {}
+  js:
+    'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js': { type: external, minified: true }
+    # 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js': { type: external, minified: true }
+    js/bootstrap.min.js: {}
+    # js/scrollspy.js: {}
+    # js/scroll: {}
+    js/masonry.js: {}
+    js/magnific-popup.js: {}
+    # js/nivo-lightbox.js: {}
+    js/wow.min.js: {}
+    js/scripts.js: {}
+
+
+  dependencies:
+   - core/jquery
+   - core/jquery.once
+   - core/drupal
+   - core/drupalsettings

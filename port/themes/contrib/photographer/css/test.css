@@ -1,0 +1,44 @@
+body {
+    background-repeat: repeat;
+  font-family: ;
+}
+body #color a {
+  font-family: ;
+  text-decoration: none;
+}
+body #color a:hover {
+  text-decoration: none;
+}
+#main-navbar-collapse li a {
+  font-family: ;
+  text-decoration: none;
+}
+#main-navbar-collapse li a:hover {
+  text-decoration: none;
+}
+#footer a {
+  font-family: ;
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: !important;
+}
+h2 {
+  font-family: !important;
+}
+h3 {
+  font-family: !important;
+}
+h4 {
+  font-family: !important;
+}
+h5 {
+  font-family: !important;
+}
+h6 {
+  font-family: !important;
+}
